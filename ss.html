@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double Click to Show Heart</title>
+<style>
+  #heart {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 100px;
+  }
+</style>
+</head>
+<body>
+
+<img src="/img/apple-touch-icon.png" id="image" ondblclick="toggleHeart()">
+
+<span id="heart">❤️</span>
+
+<script>
+function toggleHeart() {
+  let heart = document.getElementById("heart");
+  if (heart.style.display === "none") {
+    heart.style.display = "inline";
+  } else {
+    heart.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
